@@ -5,7 +5,7 @@ body, html{
 
 header {
     background-color: #1C7988;
-    height: 160px;
+    height: 200px;
     padding: 0 20px;
     width: 100%;
 
@@ -30,14 +30,16 @@ header .flexrow{
 }
 
 header .flexrow img {
-    height: 160px; 
+    height: 200px; 
     width: auto;
     display: block;
     align-self: center;
 }
 .menu {
+    display: block;
     width: 100%;
-    margin-top: -30px;
+    height: 30px;
+    margin-top: 150px ;
 }
 
 .menu ul{
@@ -45,7 +47,7 @@ header .flexrow img {
     display: flex;
     margin: 0 auto;
     padding: 0;
-    gap: 40px;              /*3. Define um espaçamento de 30px entre os itens (moderno e simples) */
+    gap: 20px;              /*3. Define um espaçamento de 30px entre os itens (moderno e simples) */
     justify-content: center;
     width: fit-content;
 }
@@ -60,26 +62,79 @@ header .flexrow img {
     font-family: "Poppins" ,sans-serif;
 }
 
-.menu a::after {
-    content: ''; /* O conteúdo deve ser vazio */
-    position: absolute; /* Permite posicionar a linha livremente */
-    width: 0; /* Começa com largura zero (invisível) */
-    height: 2px; /* Espessura da linha */
-    left: 50%; /* Centraliza a linha */
-    bottom: 0; /* Coloca a linha na parte de baixo do link */
-    background-color: #9c9b98; /* Cor de destaque  */
+.options{
+    display: flex;
+    width: 100%;
+    height: 200%;
+    margin-top: -170px;
+}
+
+.options ul{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    gap: 20px;              /*3. Define um espaçamento de 20px entre os itens (moderno e simples) */
+    margin-left: auto;
+}
+.options ul li {
+    display: flex;
+    flex-direction: column; /* Coloca o ícone e o texto um em cima do outro */
+    align-items: center; /* Centraliza o ícone e o texto */
+    font-size: 14px; /* Exemplo: Deixa o texto pequeno */
+}
+.options ul li img {
+    width: 20px; /* Define um tamanho pequeno para os ícones */
+    margin-bottom: 3px; /* Espaço entre o ícone e o texto */
+}
+.options a{
+    padding: 5px 10px;
+    color: #ffffff;
+    text-decoration: none;  /* 4. Remove o sublinhado dos links */
+    display: block;         /* Garante que o link ocupe todo o padding */
+    font-size: 15px;
+    font-family: "Poppins" ,sans-serif;
+}
+.filtro {
+   /* Centraliza e dá espaço no topo para simular o layout da imagem */
+    width: 80%; /* Largura da caixa */
+    height: 100px;
+    max-width: 1000px;
+    margin: -30px auto 0 auto; /* Margin-top negativa para "subir" a caixa sobre o fundo verde */
     
-    /* 2. Adiciona Transição: Define a suavidade da animação */
-    transition: width 0.3s ease-out, left 0.3s ease-out; 
+    /* Estilo da caixa */
+    background-color: white;
+    border-radius: 25px; /* Cantos bem arredondados */
+    padding: 10px; /* Espaçamento interno */
+    
+    /* Sombra sutil para dar profundidade (o efeito "flutuante") */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);    
+    display:flex;
+    gap: 120px;
+    align-items: center;
+    justify-content: center;
+}
+.pesquisar {
+    /* A cor de fundo do botão (similar ao teal da imagem) */
+    background-color: #2e8b9b; 
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    
+    /* Ajusta o tamanho do botão para preencher a altura da caixa */
+    padding: 15px 30px; 
+    height: 100%; /* Ajusta à altura do container (com padding) */
+    
+    /* Remove a borda padrão do botão e arredonda o lado direito */
+    border: none;
+    border-radius:  25px ; 
+    
+    /* Opcional: Efeito de hover */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    white-space: nowrap;
 }
 
-/* --- EFEITO DE HOVER (Aparece e Expande a Linha) --- */
-.menu a:hover::after {
-    width: 100%; /* A linha se expande para a largura total */
-    left: 0; /* A linha se move da centralização para a esquerda */
+.pesquisar:hover{
+    background-color: #267a87; /* Cor um pouco mais escura ao passar o mouse */
 }
 
-/* Opcional: Efeito de Mudança de Cor (mantido do original) */
-.menu a:hover {
-    color: #9c9b98; /* Mudar a cor do texto para combinar com a linha */
-}
