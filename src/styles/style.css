@@ -1,0 +1,85 @@
+body, html{
+    margin: 0%;
+    padding: 0%;
+}
+
+header {
+    background-color: #1C7988;
+    height: 160px;
+    padding: 0 20px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/*header .wrapper .flexrow {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start; 
+    height: 100%; 
+}*/
+header .flexrow{
+    width: auto;
+    position: absolute;
+    height: 200px;
+    top: 0px;
+    left: 0px;
+}
+
+header .flexrow img {
+    height: 160px; 
+    width: auto;
+    display: block;
+    align-self: center;
+}
+.menu {
+    width: 100%;
+    margin-top: -30px;
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+    gap: 40px;              /*3. Define um espaçamento de 30px entre os itens (moderno e simples) */
+    justify-content: center;
+    width: fit-content;
+}
+
+.menu a{
+    text-decoration: none;
+    padding: 5px 10px;
+    color: #ffffff;
+    text-decoration: none;  /* 4. Remove o sublinhado dos links */
+    display: block;         /* Garante que o link ocupe todo o padding */
+    font-size: 16px;
+    font-family: "Poppins" ,sans-serif;
+}
+
+.menu a::after {
+    content: ''; /* O conteúdo deve ser vazio */
+    position: absolute; /* Permite posicionar a linha livremente */
+    width: 0; /* Começa com largura zero (invisível) */
+    height: 2px; /* Espessura da linha */
+    left: 50%; /* Centraliza a linha */
+    bottom: 0; /* Coloca a linha na parte de baixo do link */
+    background-color: #9c9b98; /* Cor de destaque  */
+    
+    /* 2. Adiciona Transição: Define a suavidade da animação */
+    transition: width 0.3s ease-out, left 0.3s ease-out; 
+}
+
+/* --- EFEITO DE HOVER (Aparece e Expande a Linha) --- */
+.menu a:hover::after {
+    width: 100%; /* A linha se expande para a largura total */
+    left: 0; /* A linha se move da centralização para a esquerda */
+}
+
+/* Opcional: Efeito de Mudança de Cor (mantido do original) */
+.menu a:hover {
+    color: #9c9b98; /* Mudar a cor do texto para combinar com a linha */
+}
