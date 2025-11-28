@@ -82,6 +82,10 @@ header .flexrow img {
     align-items: center; /* Centraliza o ícone e o texto */
     font-size: 14px; /* Exemplo: Deixa o texto pequeno */
 }
+.menu li.span {
+    border-bottom: 2px solid white;  /* traçado */
+    padding-bottom: 0px;
+}
 .options ul li img {
     width: 20px; /* Define um tamanho pequeno para os ícones */
     margin-bottom: 3px; /* Espaço entre o ícone e o texto */
